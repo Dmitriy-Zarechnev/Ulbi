@@ -11,7 +11,9 @@ export default (env: BuildEnv) => {
         // ---- Где будет собрано приложение ----
         build: path.resolve(__dirname, 'build'),
         // ---- Путь к html ----
-        html: path.resolve(__dirname, 'public', 'index.html')
+        html: path.resolve(__dirname, 'public', 'index.html'),
+        // ---- Путь к папке с исходным кодом ----
+        src: path.resolve(__dirname, 'src')
     }
 
     const mode = env.mode || 'development'
