@@ -1,8 +1,12 @@
 .app.light {
   --bg-color: #e8e8ea;
+  --inverted-bg-color: #090949;
 
   // ---- Цвет заголовков ----
-  --primary-color: #0232c2;
+  --primary-color: #032a98;
+  --inverted-primary-color: #049604;
+
   // ---- Цвет текста ----
-  --secondary-color: #0449e0;
+  --secondary-color: #0552ff;
+  --inverted-secondary-color: #04ff04;
 }

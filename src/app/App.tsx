@@ -1,9 +1,9 @@
 import './styles/index.scss'
-import {Link} from 'react-router-dom'
 import {useTheme} from 'app/providers/themeProvider'
 
 import {classNames} from 'shared/lib'
 import {AppRouter} from 'app/providers/router'
+import {NavBar} from 'widgets/navBar'
 
 
 const App = () => {
@@ -14,8 +14,7 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>Toggle</button>
-            <Link to={'/'}>Main</Link>
-            <Link to={'/about'}>About</Link>
+            <NavBar/>
             <AppRouter/>
         </div>
     )

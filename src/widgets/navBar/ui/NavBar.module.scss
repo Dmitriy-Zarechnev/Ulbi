@@ -1,0 +1,18 @@
+.navBar_wrapper {
+  width: 100%;
+  height: var(--nav-bar-height);
+  background: var(--inverted-bg-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
