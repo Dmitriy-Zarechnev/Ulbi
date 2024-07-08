@@ -5,7 +5,6 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 
 export default [
     pluginReactConfig,
-
     {languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}}},
     {languageOptions: {globals: {__IS_DEV__: true}}},
     pluginJs.configs.recommended,
@@ -29,7 +28,9 @@ export default [
             'no-shadow': 'off',
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
-            'no-underscore-dangle': 'off'
+            'no-underscore-dangle': 'off',
+            "i18next/no-literal-string": 2
         }
-    }
+    },
+
 ]
