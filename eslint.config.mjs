@@ -1,17 +1,19 @@
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
+import pluginI18next from 'eslint-plugin-i18next'
 
 
 export default [
     pluginReactConfig,
+    //pluginI18next,
     {languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}}},
     {languageOptions: {globals: {__IS_DEV__: true}}},
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     {
         files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-        rules: {
+                rules: {
             'react/jsx-indent': [2, 4],
             'react/jsx-indent-props': [2, 4],
             indent: [2, 4],
@@ -29,7 +31,7 @@ export default [
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
             'no-underscore-dangle': 'off',
-            "i18next/no-literal-string": 2
+            //'i18next/no-literal-string': [2, {markupOnly: true}]
         }
     },
 
