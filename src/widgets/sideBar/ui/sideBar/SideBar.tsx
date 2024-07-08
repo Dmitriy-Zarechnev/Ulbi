@@ -3,6 +3,7 @@ import {classNames} from 'shared/lib'
 import {useState} from 'react'
 import {ThemeSwitcher} from 'shared/ui/themeSwitcher'
 import {LangSwitcher} from 'shared/ui/langSwitcher'
+import {Button} from 'shared/ui/button/Button'
 
 
 interface SideBarProps {
@@ -18,7 +19,7 @@ export const SideBar = ({className}: SideBarProps) => {
 
     return (
         <div className={classNames(s.sideBar_wrapper, {[s.collapsed]: collapsed}, [className])}>
-            <button onClick={onToggleHandler}>Toggle</button>
+            <Button onClick={onToggleHandler}>Toggle</Button>
             <div className={s.switchers}>
                 <ThemeSwitcher/>
                 <LangSwitcher/>

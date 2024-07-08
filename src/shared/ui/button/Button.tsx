@@ -14,8 +14,9 @@ export const Button = (props: ButtonProps) => {
     const {className, children, theme, ...rest} = props
 
     return (
-        <button className={classNames(s.button_wrapper, {}, [className, s[theme]])}
-                {...rest}
+        <button type={'button'}
+            className={classNames(s.button_wrapper, {}, [className, s[theme]])}
+            {...rest}
         >
             {children}
         </button>
