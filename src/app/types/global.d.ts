@@ -19,3 +19,6 @@ declare module '*.svg' {
     const SVG: FunctionComponent<SVGProps<SVGSVGElement>>
     export default SVG
 }
+
+// Глобальная константа
+declare const __IS_DEV__: boolean
