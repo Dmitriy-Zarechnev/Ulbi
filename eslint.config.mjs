@@ -30,7 +30,8 @@ export default [
             'no-shadow': 'off',
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
-            'no-underscore-dangle': 'off'
+            'no-underscore-dangle': 'off',
+            'max-len': [2, {'code': 120, 'ignoreComments': true}]
             //'i18next/no-literal-string': [2, {markupOnly: true}]
         }
     }
