@@ -1,0 +1,8 @@
+.pageLoader_wrapper {
+  min-height: calc(100vh - var(--nav-bar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
