@@ -13,7 +13,7 @@ export default [
     ...tseslint.configs.recommended,
     {
         files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-                rules: {
+        rules: {
             'react/jsx-indent': [2, 4],
             'react/jsx-indent-props': [2, 4],
             indent: [2, 4],
@@ -30,9 +30,9 @@ export default [
             'no-shadow': 'off',
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
-            'no-underscore-dangle': 'off',
+            'no-underscore-dangle': 'off'
             //'i18next/no-literal-string': [2, {markupOnly: true}]
         }
-    },
+    }
 
 ]
