@@ -4,6 +4,7 @@
  */
 
 import type {Config} from 'jest'
+import path from 'path'
 
 const config: Config = {
     // The root directory that Jest should scan for tests and modules within
@@ -64,7 +65,8 @@ const config: Config = {
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
     moduleNameMapper: {
-        '\\.s?css$': 'identity-obj-proxy'
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg':path.resolve(__dirname, 'jestEmptyComponent.tsx')
     }
 
     // Indicates whether the coverage information should be collected while executing the test
