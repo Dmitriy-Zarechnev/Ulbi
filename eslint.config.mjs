@@ -1,12 +1,10 @@
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
-import pluginI18next from 'eslint-plugin-i18next'
 
 
 export default [
     pluginReactConfig,
-    //pluginI18next,
     {languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}}},
     {languageOptions: {globals: {__IS_DEV__: true}}},
     pluginJs.configs.recommended,
@@ -32,8 +30,6 @@ export default [
             'import/no-extraneous-dependencies': 'off',
             'no-underscore-dangle': 'off',
             'max-len': [2, {'code': 120, 'ignoreComments': true}]
-            //'i18next/no-literal-string': [2, {markupOnly: true}]
         }
     }
-
 ]
