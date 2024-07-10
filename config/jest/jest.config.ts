@@ -3,9 +3,11 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type {Config} from 'jest'
 
 const config: Config = {
+    // The root directory that Jest should scan for tests and modules within
+    rootDir: '../../',
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -20,45 +22,50 @@ const config: Config = {
 
     // Specify the Babel transformer for TypeScript files
     transform: {
-        '^.+\\.(ts|tsx)$': 'babel-jest',
+        '^.+\\.(ts|tsx)$': 'babel-jest'
     },
 
 
     // The test environment that will be used for testing
-    testEnvironment: "jsdom",
+    testEnvironment: 'jsdom',
 
 
     // An array of regexp pattern strings used to skip coverage collection
     coveragePathIgnorePatterns: [
-        "\\\\node_modules\\\\"
+        '\\\\node_modules\\\\'
     ],
 
 
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: [
-        "node_modules"
+        'node_modules'
     ],
 
 
     // An array of file extensions your modules use
     moduleFileExtensions: [
-        "js",
-        "mjs",
-        "cjs",
-        "jsx",
-        "ts",
-        "tsx",
-        "json",
-        "node"
+        'js',
+        'mjs',
+        'cjs',
+        'jsx',
+        'ts',
+        'tsx',
+        'json',
+        'node'
     ],
 
+    modulePaths: [
+        '<rootDir>src'
+    ],
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 
     // The glob patterns Jest uses to detect test files
-    testMatch: [ "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
+    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
-
-    // The root directory that Jest should scan for tests and modules within
-    rootDir: '../../',
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy'
+    }
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -68,7 +75,6 @@ const config: Config = {
 
     // The directory where Jest should output its coverage files
     // coverageDirectory: undefined,
-
 
 
     // Indicates which provider should be used to instrument code for coverage
@@ -112,9 +118,6 @@ const config: Config = {
     // maxWorkers: "50%",
 
 
-
-
-
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
 
@@ -149,7 +152,6 @@ const config: Config = {
     // restoreMocks: false,
 
 
-
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -171,13 +173,11 @@ const config: Config = {
     // snapshotSerializers: [],
 
 
-
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
 
     // Adds a location field to test results
     // testLocationInResults: false,
-
 
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
@@ -214,6 +214,6 @@ const config: Config = {
 
     // Whether to use watchman for file crawling
     // watchman: true,
-};
+}
 
-export default config;
+export default config
