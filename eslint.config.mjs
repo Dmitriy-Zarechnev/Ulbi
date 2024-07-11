@@ -34,6 +34,7 @@ export default [
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
             'no-underscore-dangle': 'off',
+            'react/display-name': 'off',
             'max-len': [2, {'code': 120, 'ignoreComments': true}]
         }
     }

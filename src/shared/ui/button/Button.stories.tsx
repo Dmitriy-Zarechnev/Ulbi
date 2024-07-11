@@ -1,15 +1,12 @@
 import {Button, ThemeButton} from './Button'
 import {Meta, StoryObj} from '@storybook/react'
-import {StyleDecorator} from 'shared/config/storybook/styleDecorator/StyleDecorator'
+import {ThemeDecorator} from 'shared/config/storybook/themeDecorator/ThemeDecorator'
+import {Theme} from 'app/providers/themeProvider'
 
 
 const meta = {
-    title: 'shared/ui/Button',
+    title: 'shared/Button',
     component: Button,
-    parameters: {
-        layout: 'centered'
-    },
-    decorators: [StyleDecorator],
     tags: ['autodocs'],
     argTypes: {},
     args: {}
@@ -18,22 +15,45 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>;
 
-export const DefaultThemeButton: Story = {
+
+export const DefaultLightThemeButton: Story = {
     args: {
-        children: 'Default Theme Button'
+        children: 'Default Light Theme Button'
     }
 }
+export const DefaultDarkThemeButton: Story = {
+    args: {
+        children: 'Default Dark Theme Button'
+    }
+}
+DefaultDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
 
-export const ClearThemeButton: Story = {
+
+export const ClearLightThemeButton: Story = {
     args: {
         theme: ThemeButton.CLEAR,
-        children: 'Clear Theme Button'
+        children: 'Clear Light Theme Button'
     }
 }
+export const ClearDarkThemeButton: Story = {
+    args: {
+        theme: ThemeButton.CLEAR,
+        children: 'Clear Dark Theme Button'
+    }
+}
+ClearDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
 
-export const OutlineThemeButton: Story = {
+
+export const OutlineLightThemeButton: Story = {
     args: {
         theme: ThemeButton.OUTLINE,
-        children: 'Outline Theme Button'
+        children: 'Outline Light Theme Button'
     }
 }
+export const OutlineDarkThemeButton: Story = {
+    args: {
+        theme: ThemeButton.OUTLINE,
+        children: 'Outline Dark Theme Button'
+    }
+}
+OutlineDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]

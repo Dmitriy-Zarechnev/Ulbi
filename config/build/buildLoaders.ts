@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import {BuildOptions} from './types/config'
 import {buildCssLoader} from './loaders/buildCssLoader'
+import {buildSvgLoader} from './loaders/buildSvgLoader'
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     // ---- Важен порядок loaders, поэтому выносим их в переменные ----
@@ -10,10 +11,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/
     }
 
-    const svgLoader = {
-        test: /\.svg$/,
-        use: ['@svgr/webpack']
-    }
+    const svgLoader = buildSvgLoader()
 
     const babelLoader = {
         test: /\.(js|jsx|ts|tsx)$/,
