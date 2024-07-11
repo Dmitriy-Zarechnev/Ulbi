@@ -1,12 +1,18 @@
-import {render, screen} from '@testing-library/react'
+import {fireEvent, screen} from '@testing-library/react'
 import {SideBar} from 'widgets/sideBar'
-import {withTranslation} from 'react-i18next'
+import {renderWithTranslation} from 'shared/lib'
 
 describe('SideBar tests', () => {
     test('check sidebar render', () => {
-        const SideBarWithTranslation = withTranslation()(SideBar)
-        render(<SideBarWithTranslation/>)
+        renderWithTranslation(<SideBar/>)
         expect(screen.getByTestId('sideBar')).toBeInTheDocument()
     })
 
+    test('toggle sidebar', () => {
+        renderWithTranslation(<SideBar/>)
+        const toggleBtn = screen.getByTestId('sideBar-toggle')
+
+        fireEvent.click(toggleBtn)
+        expect(screen.getByTestId('sideBar')).toHaveClass('collapsed')
+    })
 })
