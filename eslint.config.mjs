@@ -4,6 +4,11 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 import i18next from 'eslint-plugin-i18n'
 
 export default [
+    {
+        plugins: {
+            i18next
+        }
+    },
     pluginReactConfig,
     {languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}}},
     {languageOptions: {globals: {__IS_DEV__: true}}},
@@ -29,19 +34,13 @@ export default [
             'import/extensions': 'off',
             'import/no-extraneous-dependencies': 'off',
             'no-underscore-dangle': 'off',
-            'max-len': [2, {'code': 120, 'ignoreComments': true}],
+            'max-len': [2, {'code': 120, 'ignoreComments': true}]
         }
-    },
-    {
-        plugins: {
-            i18next
-        }
-    },
-
+    }
 
 ]
 
-//'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid']}]
+//'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid', 'to']}]
 
 //  overrides:[ { files: ['**/src/**/*.test.{ts,tsx}'],
 //  rules: {
