@@ -4,11 +4,11 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 import i18next from 'eslint-plugin-i18n'
 
 export default [
-    {
-        plugins: {
-            i18next
-        }
-    },
+    // {
+    //     plugins: {
+    //         i18next
+    //     }
+    // },
     pluginReactConfig,
     {languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}}},
     {languageOptions: {globals: {__IS_DEV__: true}}},
