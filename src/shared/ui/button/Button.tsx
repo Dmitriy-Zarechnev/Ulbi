@@ -28,6 +28,8 @@ export const Button = (props: ButtonProps) => {
         size = ButtonSize.M,
         square,
         theme,
+        onClick,
+        type = 'button',
         ...rest
     } = props
 
@@ -36,7 +38,9 @@ export const Button = (props: ButtonProps) => {
     }
 
     return (
-        <button type={'button'}
+        <button
+            type={type}
+            onClick={onClick}
             className={classNames(s.button_wrapper, mods, [className, s[theme], s[size]])}
             {...rest}
         >
