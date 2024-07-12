@@ -7,7 +7,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
     // Список всех plugins приложения
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({template: paths.html}),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
@@ -16,10 +16,19 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false
         })
+
     ]
+
+    if (isDev) {
+        plugins.push(
+            new webpack.HotModuleReplacementPlugin(),
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false
+            })
+        )
+    }
+
+
+    return plugins
 }
