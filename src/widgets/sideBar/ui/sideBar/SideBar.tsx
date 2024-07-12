@@ -3,7 +3,7 @@ import {classNames} from 'shared/lib'
 import {ComponentPropsWithRef, useState} from 'react'
 import {ThemeSwitcher} from 'shared/ui/themeSwitcher'
 import {LangSwitcher} from 'shared/ui/langSwitcher'
-import {Button} from 'shared/ui/button/Button'
+import {Button, ButtonSize, ButtonTheme} from 'shared/ui/button/Button'
 
 
 interface SideBarProps extends ComponentPropsWithRef<'div'> {
@@ -23,8 +23,13 @@ export const SideBar = ({className}: SideBarProps) => {
 
             <Button
                 data-testid={'sideBar-toggle'}
-                onClick={onToggleHandler}>
-                Toggle
+                onClick={onToggleHandler}
+                className={s.collapsedBtn}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                square
+                size={ButtonSize.L}
+            >
+                {collapsed ? '>' : '<'}
             </Button>
 
             <div className={s.switchers}>
