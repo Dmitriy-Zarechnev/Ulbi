@@ -1,7 +1,7 @@
 .sideBar_wrapper {
   height: calc(100vh - var(--nav-bar-height));
   width: var(--side-bar-width);
-  background: var(--inverted-bg-color);
+  background-color: var(--inverted-bg-color);
   position: relative;
   transition: width 0.3s;
 }
@@ -15,9 +15,14 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   gap: 20px;
   width: 100%;
+}
+
+.switchersCollapsed {
+  flex-direction: column;
+  gap: 10px;
 }
 
 .collapsedBtn {

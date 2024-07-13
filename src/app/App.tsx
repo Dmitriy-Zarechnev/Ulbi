@@ -1,4 +1,3 @@
-import './styles/index.scss'
 import {useTheme} from 'app/providers/themeProvider'
 import {classNames} from 'shared/lib'
 import {AppRouter} from 'app/providers/router'
@@ -10,7 +9,6 @@ import {Suspense} from 'react'
 const App = () => {
     // ---- Hook для работы с theme ----
     const {theme} = useTheme()
-
 
 
     return (

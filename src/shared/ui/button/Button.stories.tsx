@@ -230,6 +230,120 @@ export const SquareXLClearDarkThemeButton: Story = {
 SquareXLClearDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
 
 
+// -------------- Clear_Inverted Button --------------
+export const ClearInvertedLightThemeButton: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'Clear Inverted Light Theme Button'
+    }
+}
+export const ClearInvertedDarkThemeButton: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'Clear Inverted Dark Theme Button'
+    }
+}
+ClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const MClearInvertedLightThemeButton: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'M Clear Inverted Light Theme Button'
+    }
+}
+export const MClearInvertedDarkThemeButton: Story = {
+    args: {
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'M Clear Inverted Dark Theme Button'
+    }
+}
+MClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const LClearInvertedLightThemeButton: Story = {
+    args: {
+        size: ButtonSize.L,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'L Clear Inverted Light Theme Button'
+    }
+}
+export const LClearInvertedDarkThemeButton: Story = {
+    args: {
+        size: ButtonSize.L,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'L Clear Inverted Dark Theme Button'
+    }
+}
+LClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const XLClearInvertedLightThemeButton: Story = {
+    args: {
+        size: ButtonSize.XL,
+        theme: ButtonTheme.CLEAR,
+        children: 'XL Clear Light Theme Button'
+    }
+}
+export const XLClearInvertedDarkThemeButton: Story = {
+    args: {
+        size: ButtonSize.XL,
+        theme: ButtonTheme.CLEAR,
+        children: 'XL Clear Dark Theme Button'
+    }
+}
+XLClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SquareMClearInvertedLightThemeButton: Story = {
+    args: {
+        square: true,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'M'
+    }
+}
+export const SquareMClearInvertedDarkThemeButton: Story = {
+    args: {
+        square: true,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'M'
+    }
+}
+SquareMClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SquareLClearInvertedLightThemeButton: Story = {
+    args: {
+        square: true,
+        size: ButtonSize.L,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'L'
+    }
+}
+export const SquareLClearInvertedDarkThemeButton: Story = {
+    args: {
+        square: true,
+        size: ButtonSize.L,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'L'
+    }
+}
+SquareLClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SquareXLClearInvertedLightThemeButton: Story = {
+    args: {
+        square: true,
+        size: ButtonSize.XL,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'XL'
+    }
+}
+export const SquareXLClearInvertedDarkThemeButton: Story = {
+    args: {
+        square: true,
+        size: ButtonSize.XL,
+        theme: ButtonTheme.CLEAR_INVERTED,
+        children: 'XL'
+    }
+}
+SquareXLClearInvertedDarkThemeButton.decorators = [ThemeDecorator(Theme.DARK)]
+
+
 // -------------- Outline Button --------------
 export const OutlineLightThemeButton: Story = {
     args: {
