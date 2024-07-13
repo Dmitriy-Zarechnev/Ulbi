@@ -25,3 +25,24 @@
   right: -40px;
   bottom: 30px;
 }
+
+.links {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
