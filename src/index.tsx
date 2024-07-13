@@ -10,6 +10,7 @@ import {ErrorBoundary} from 'app/providers/errorBoundary'
 const container = document.getElementById('root')
 const root = createRoot(container)
 
+
 root.render(
     <BrowserRouter>
         <ErrorBoundary>
