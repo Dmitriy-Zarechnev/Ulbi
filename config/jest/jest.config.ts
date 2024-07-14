@@ -7,6 +7,11 @@ import type {Config} from 'jest'
 import path from 'path'
 
 const config: Config = {
+    // A set of global variables that need to be available in all test environments
+    globals: {
+        '__IS_DEV__': true
+    },
+
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
     // All imported modules in your tests should be mocked automatically
@@ -25,6 +30,7 @@ const config: Config = {
     transform: {
         '^.+\\.(ts|tsx)$': 'babel-jest'
     },
+
 
 
     // The test environment that will be used for testing
@@ -66,7 +72,7 @@ const config: Config = {
 
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg':path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
     }
 
     // Indicates whether the coverage information should be collected while executing the test

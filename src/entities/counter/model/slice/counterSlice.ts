@@ -25,6 +25,6 @@ export const counterSlice = createSlice({
 
 export const CounterActions = counterSlice.actions
 export const CounterReducer = counterSlice.reducer
-export const selectCounter = counterSlice.selectors
+export const SelectCounter = counterSlice.selectors
 
 
