@@ -1,5 +1,5 @@
 import {classNames} from 'shared/lib'
-import {Button, ButtonTheme} from 'shared/ui/button/Button'
+import {Button, ButtonTheme} from '../../button'
 import {useTranslation} from 'react-i18next'
 
 

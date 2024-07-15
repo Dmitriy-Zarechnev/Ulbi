@@ -2,7 +2,6 @@ import s from './Modal.module.scss'
 import {classNames} from 'shared/lib'
 import {ReactNode, useCallback, useEffect, useRef, useState} from 'react'
 import {Portal} from 'shared/ui/portal'
-import {useTheme} from 'app/providers/themeProvider'
 
 interface ModalProps {
     className?: string
@@ -18,7 +17,7 @@ export const Modal = (props: ModalProps) => {
     const {className, children, isOpen, onClose} = props
     const [isClosing, setIsClosing] = useState<boolean>(false)
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
-    const {theme} = useTheme()
+
 
     const mods: Record<string, boolean> = {
         [s.opened]: isOpen,

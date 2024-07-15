@@ -1,7 +1,7 @@
 import s from './PageError.module.scss'
 import {classNames} from 'shared/lib'
 import {useTranslation} from 'react-i18next'
-import {Button} from 'shared/ui/button/Button'
+import {Button} from 'shared/ui/button'
 
 interface ErrorPageProps {
     className?: string

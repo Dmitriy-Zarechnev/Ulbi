@@ -3,7 +3,7 @@ import {classNames} from 'shared/lib'
 import {ComponentPropsWithRef, useState} from 'react'
 import {ThemeSwitcher} from 'shared/ui/themeSwitcher'
 import {LangSwitcher} from 'shared/ui/langSwitcher'
-import {Button, ButtonSize, ButtonTheme} from 'shared/ui/button/Button'
+import {Button, ButtonSize, ButtonTheme} from 'shared/ui/button'
 import {AppLink, AppLinkTheme} from 'shared/ui/appLink/AppLink'
 import {RoutePath} from 'shared/config/routeConfig/routeConfig'
 

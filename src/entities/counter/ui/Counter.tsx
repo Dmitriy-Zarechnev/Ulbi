@@ -1,4 +1,4 @@
-import {Button} from 'shared/ui/button/Button'
+import {Button} from 'shared/ui/button/ui/Button'
 import {useDispatch, useSelector} from 'react-redux'
 import {CounterActions, SelectCounter} from '../model/slice/counterSlice'
 

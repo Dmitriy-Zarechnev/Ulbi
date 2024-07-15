@@ -1,0 +1,21 @@
+.input_wrapper {
+  display: flex;
+
+}
+
+.placeholder {
+  margin-right: 5px;
+}
+
+.caret_wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+
+
+.caret {
+  height: 3px;
+  width: 10px;
+  background-color: var(--primary-color);
+}
