@@ -4,9 +4,21 @@
 
 .placeholder {
   margin-right: 5px;
+  color: var(--primary-color);
 }
 
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: transparent;
+  text-shadow: 0 0 0 var(--primary-color);
 
+  &:focus {
+    outline: none;
+  }
+}
 
 .caret_wrapper {
   flex-grow: 1;
@@ -17,4 +29,22 @@
   height: 3px;
   width: 10px;
   background-color: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: blink 1s forwards infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

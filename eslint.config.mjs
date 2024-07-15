@@ -31,6 +31,7 @@ export default [
             'no-underscore-dangle': 'off',
             'react/display-name': 'off',
             'jsx-a11y/no-static-element-interactions': 'off',
+            '@typescript-eslint/no-explicit-any': 'off',
             'max-len': [2, {'code': 120, 'ignoreComments': true}]
         }
     }

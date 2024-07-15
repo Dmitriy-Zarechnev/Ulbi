@@ -13,8 +13,8 @@ export const LoginForm = ({className}: LoginFormProps) => {
 
     return (
         <div className={classNames(s.loginForm_wrapper, {}, [className])}>
-            <Input/>
-            <Input/>
+            <Input placeholder={t('Введите username')} autoFocus/>
+            <Input placeholder={t('Введите пароль')}/>
             <Button className={s.loginBtn}>
                 {t('Войти')}
             </Button>
