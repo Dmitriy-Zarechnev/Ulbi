@@ -6,6 +6,7 @@ import {Input} from 'shared/ui/input'
 import {useDispatch, useSelector} from 'react-redux'
 import {memo, useCallback} from 'react'
 import {LoginActions, LoginSelectors} from '../../model/slice/loginSlice'
+import {loginByUsername} from '../../model/services/loginByUsername/loginByUsername'
 
 interface LoginFormProps {
     className?: string
@@ -18,6 +19,7 @@ export const LoginForm = memo(({className}: LoginFormProps) => {
     const loginPassword = useSelector(LoginSelectors.selectPassword)
     const loginUsername = useSelector(LoginSelectors.selectUsername)
 
+
     const onChangeUsername = useCallback((value: string) => {
         dispatch(LoginActions.setUserName(value))
     }, [dispatch])
@@ -25,6 +27,10 @@ export const LoginForm = memo(({className}: LoginFormProps) => {
 
     const onChangePassword = useCallback((value: string) => {
         dispatch(LoginActions.setPassword(value))
+    }, [dispatch])
+
+    const onLoginClickHandler = useCallback(() => {
+        //dispatch(loginByUsername({username, password}))
     }, [dispatch])
 
 
@@ -42,6 +48,7 @@ export const LoginForm = memo(({className}: LoginFormProps) => {
             <Button
                 theme={ButtonTheme.OUTLINE}
                 className={s.loginBtn}
+                onClick={onLoginClickHandler}
             >
                 {t('Войти')}
             </Button>
