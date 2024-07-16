@@ -2,6 +2,6 @@
 
 // ===================== MODEL ======================
 // --------------------- slice ----------------------
-export {SelectUser, UserReducer, UserActions} from './model/slice/userSlice'
+export {UserSelectors, UserReducer, UserActions} from './model/slice/userSlice'
 // --------------------- types ----------------------
 export {User, UserSchema} from './model/types/user'

@@ -15,6 +15,7 @@ export const LoginModal = (props: LoginModalProps) => {
         isOpen,
         onClose
     } = props
+
     return (
         <Modal
             isOpen={isOpen}
